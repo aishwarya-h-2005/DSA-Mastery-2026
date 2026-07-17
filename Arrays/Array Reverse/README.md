@@ -3,28 +3,33 @@
 ## Problem Statement
 Reverse an array such that the first element becomes the last, the second becomes the second last, and so on.
 
-### Example
+## Example
 
-**Input**
+Input:
 ```
 [1, 4, 3, 2, 6, 5]
 ```
 
-**Output**
+Output:
 ```
 [5, 6, 2, 3, 4, 1]
 ```
 
-## Approach
-- Create a temporary array of the same size.
-- Copy the elements from the original array into the temporary array in reverse order.
-- Copy the elements from the temporary array back into the original array.
+## Approaches
 
-## Time Complexity
-**O(n)**
+### 1. Temporary Array
+- Uses an extra array to store elements in reverse order.
+- Time Complexity: **O(n)**
+- Space Complexity: **O(n)**
 
-## Space Complexity
-**O(n)**
+**File:** `ArrayReverse_TempArray.java`
+
+### 2. Two Pointers (Optimized)
+- Swaps the first and last elements, then moves both pointers toward the center.
+- Time Complexity: **O(n)**
+- Space Complexity: **O(1)**
+
+**File:** `ArrayReverse_TwoPointers.java`
 
 ## Language
 Java
