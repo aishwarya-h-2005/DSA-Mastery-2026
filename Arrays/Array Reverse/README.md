@@ -31,5 +31,14 @@ Output:
 
 **File:** `ArrayReverse_TwoPointers.java`
 
+### 3. Single Pointer
+
+- Iterate only through the first half of the array.
+- Swap each element with its corresponding element from the end.
+**Time Complexity:** O(n)
+**Space Complexity:** O(1)
+
+**File:** `ArrayReverse_SinglePointer.java`
+
 ## Language
 Java
