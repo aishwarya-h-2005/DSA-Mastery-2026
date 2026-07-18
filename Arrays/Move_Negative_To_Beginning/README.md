@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Given an array containing both positive and negative numbers, rearrange the array so that all negative numbers appear before all positive numbers.
+Given an array containing both positive and negative numbers, rearrange the array so that all negative numbers appear before all positive numbers. The order of elements does not matter.
 
 ### Example
 
@@ -18,12 +18,12 @@ Given an array containing both positive and negative numbers, rearrange the arra
 
 ---
 
-## Approach Used
+# Approach 1: Sorting
 
-### Sorting
+### Algorithm
 
 1. Sort the array using `Arrays.sort()`.
-2. After sorting, all negative numbers come before positive numbers.
+2. Print the sorted array.
 
 ### Time Complexity
 
@@ -39,4 +39,32 @@ O(1)
 
 ### File
 
-- `MoveNegativeSorting.java`
+- `MoveNegativeNumbers_Sorting.java`
+
+---
+
+# Approach 2: Quick Sort Partition (Optimal)
+
+### Algorithm
+
+1. Initialize `j = 0`.
+2. Traverse the array using `i`.
+3. If `arr[i]` is negative, swap it with `arr[j]`.
+4. Increment `j` after every swap.
+5. Continue until the end of the array.
+
+### Time Complexity
+
+```
+O(n)
+```
+
+### Space Complexity
+
+```
+O(1)
+```
+
+### File
+
+- `MoveNegativeNumbers_QuickPartition.java`
