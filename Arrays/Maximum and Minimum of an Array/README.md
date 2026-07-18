@@ -3,17 +3,26 @@
 ## Problem Statement
 Find the minimum and maximum elements in an array.
 
+---
+
 ## Approach 1: Sorting
 
-- Sort the array in ascending order.
-- The first element is the minimum.
-- The last element is the maximum.
+**Time Complexity:** O(n log n)
 
-### Time Complexity
-O(n log n)
+**Space Complexity:** O(1)
 
-### Space Complexity
-O(1)
+**File:**
+- MinMax_Sorting.java
 
-## File
-- `MinMax_Sorting.java`
+---
+
+## Approach 2: Iterative Traversal
+
+Traverse the array once and update the minimum and maximum values.
+
+**Time Complexity:** O(n)
+
+**Space Complexity:** O(1)
+
+**File:**
+- MinMax_Iterative.java
