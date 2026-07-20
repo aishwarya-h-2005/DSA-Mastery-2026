@@ -2,7 +2,7 @@
 
 ## Problem Statement
 
-Given an array, cyclically right rotate the array by one position.
+Given an array, the task is to cyclically right-rotate the array by one position.
 
 ### Example 1
 
@@ -34,7 +34,7 @@ arr = [2, 3, 4, 5, 1]
 
 ---
 
-## Approach 1: Shifting Each Element
+# Approach 1: Shifting Each Element
 
 ### Algorithm
 
@@ -57,11 +57,22 @@ arr = [2, 3, 4, 5, 1]
 
 ---
 
-## Note
+# Approach 2: Reversal Algorithm
 
-Other approaches include:
+### Algorithm
 
-- Using Two Pointers – **O(n)** Time, **O(1)** Space
-- Using Array Reversal – **O(n)** Time, **O(1)** Space
+1. Reverse the entire array.
+2. Reverse the elements from index `1` to `n-1`.
+3. Print the rotated array.
 
-I will add these approaches after learning them.
+### Time Complexity
+
+- **O(n)**
+
+### Space Complexity
+
+- **O(1)**
+
+### File
+
+- `RotateArrayByOne_Reversal.java`
