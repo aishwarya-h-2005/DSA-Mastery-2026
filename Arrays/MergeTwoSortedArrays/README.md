@@ -29,7 +29,7 @@ arr2 = [5, 6, 7, 8]
 
 ---
 
-# Approach (Naive)
+# Approach 1 (Naive)
 
 ### Algorithm
 
@@ -41,20 +41,44 @@ arr2 = [5, 6, 7, 8]
 6. Copy the remaining `m` elements back to `arr2`.
 7. Print both arrays.
 
----
-
-## Time Complexity
+### Time Complexity
 
 **O((n + m) log(n + m))**
 
----
-
-## Space Complexity
+### Space Complexity
 
 **O(n + m)**
 
----
-
-## Java File
+### Java File
 
 `MergeTwoSortedArrays_Naive.java`
+
+---
+
+# Approach 2 (Two Pointer)
+
+### Algorithm
+
+1. Create a temporary array `merged` of size `n + m`.
+2. Initialize three pointers:
+   - `i` for `arr1`
+   - `j` for `arr2`
+   - `k` for `merged`
+3. Compare `arr1[i]` and `arr2[j]`.
+4. Copy the smaller element into `merged` and move the corresponding pointer.
+5. Repeat until one array is completely traversed.
+6. Copy the remaining elements of the unfinished array into `merged`.
+7. Copy the first `n` elements of `merged` back to `arr1`.
+8. Copy the remaining `m` elements of `merged` back to `arr2`.
+
+### Time Complexity
+
+**O(n + m)**
+
+### Space Complexity
+
+**O(n + m)**
+
+### Java File
+
+`MergeTwoSortedArrays_TwoPointer.java`
