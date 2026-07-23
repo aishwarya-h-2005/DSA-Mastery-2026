@@ -1,8 +1,8 @@
-# 2 Sum - Count Pairs with Given Sum
+# Count Pairs with Given Sum
 
 ## Problem Statement
 
-Given an integer array `arr[]` and a target value, find the number of pairs whose sum is equal to the given target.
+Given an integer array `arr[]` and a target value, count the number of pairs whose sum is equal to the given target.
 
 A pair `(arr[i], arr[j])` is considered valid if:
 
@@ -30,13 +30,13 @@ target = 6
 
 ### Explanation
 
-The pairs with sum equal to `6` are:
+The valid pairs are:
 
 - (1, 5)
 - (7, -1)
 - (1, 5)
 
-So, the total number of pairs is **3**.
+Therefore, the total number of pairs is **3**.
 
 ---
 
@@ -44,33 +44,49 @@ So, the total number of pairs is **3**.
 
 ## Algorithm
 
-1. Initialize a variable `count = 0`.
-2. Use the first loop to select each element.
-3. Use the second loop to compare it with every remaining element.
-4. If the sum of the two elements equals the target, increment `count`.
-5. After checking all possible pairs, print the value of `count`.
+1. Initialize `count = 0`.
+2. Use two nested loops to generate all possible pairs.
+3. For every pair, check whether `arr[i] + arr[j] == target`.
+4. If the condition is true, increment `count`.
+5. After checking all pairs, print the final count.
 
----
-
-## Time Complexity
+### Time Complexity
 
 **O(n²)**
 
----
-
-## Space Complexity
+### Space Complexity
 
 **O(1)**
 
----
+### Java File
 
-## Efficiency
-
-- **Time:** O(n²), because every pair of elements is checked.
-- **Space:** O(1), because no extra data structure is used.
+`CountPairsWithGivenSum_Naive.java`
 
 ---
 
-## Java File
+# Approach 2 (Optimal - HashMap)
 
-`TwoSumCountPairs_Naive.java`
+## Algorithm
+
+1. Create a `HashMap` to store the frequency of elements.
+2. Traverse the array one element at a time.
+3. Calculate the complement:
+   ```
+   complement = target - arr[i]
+   ```
+4. If the complement exists in the HashMap, add its frequency to the answer.
+5. Store the current element in the HashMap by increasing its frequency.
+6. Continue until all elements are processed.
+7. Print the final count.
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(n)**
+
+### Java File
+
+`CountPairsWithGivenSum_HashMap.java`
