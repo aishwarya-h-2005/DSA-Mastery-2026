@@ -5,7 +5,7 @@
 Given an array `prices[]` where each element represents the stock price on a particular day, find the maximum profit that can be earned by performing **at most one transaction** (one buy and one sell).
 
 **Note:**
-- Buy before you sell.
+- You must buy the stock before selling it.
 - If no profit can be made, return `0`.
 
 ---
@@ -37,36 +37,48 @@ Profit = **9 - 1 = 8**
 ## Algorithm
 
 1. Initialize `result = 0`.
-2. Select each day as the buying day.
+2. Choose each day as the buying day.
 3. Compare it with every following day as the selling day.
-4. Calculate the profit using:
+4. Calculate the profit:
    ```
-   profit = prices[j] - prices[i]
+   prices[j] - prices[i]
    ```
 5. Update the maximum profit using `Math.max()`.
 6. Print the maximum profit.
 
----
-
-## Time Complexity
+### Time Complexity
 
 **O(n²)**
 
----
-
-## Space Complexity
+### Space Complexity
 
 **O(1)**
 
----
-
-## Efficiency
-
-- **Time:** O(n²), because every buying day is compared with every possible selling day.
-- **Space:** O(1), because only one variable is used to store the maximum profit.
-
----
-
-## Java File
+### Java File
 
 `StockBuySell_Naive.java`
+
+---
+
+# Approach 2 (Optimized)
+
+## Algorithm
+
+1. Assume the first day's price is the buying price.
+2. Traverse the array from left to right.
+3. If the current price is greater than the buying price, calculate the profit and update the maximum profit.
+4. Otherwise, update the buying price with the current smaller price.
+5. Continue until the end of the array.
+6. Print the maximum profit.
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(1)**
+
+### Java File
+
+`StockBuySell_Optimized.java`
