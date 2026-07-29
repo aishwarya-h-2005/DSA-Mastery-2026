@@ -32,7 +32,7 @@ efcdba
 
 ---
 
-## Approach
+## Approach 1
 
 ### Using Backward Traversal
 
@@ -50,3 +50,26 @@ efcdba
 ## Auxiliary Space
 
 - **O(n)**
+
+- ## Approach 2
+
+### Using Two Pointers
+
+- Convert the string into a character array.
+- Initialize two pointers:
+  - left = 0
+  - right = last index
+- Swap the characters at left and right.
+- Move left forward and right backward.
+- Repeat until both pointers meet.
+- Print the reversed character array.
+
+---
+
+## Time Complexity
+
+- *O(n)*
+
+## Auxiliary Space
+
+- *O(1)*
