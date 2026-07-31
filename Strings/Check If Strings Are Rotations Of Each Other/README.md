@@ -73,7 +73,7 @@ false
 - If `result` contains `s2`, then `s2` is a rotation of `s1`.
 - Otherwise, it is not a rotation.
 
-**Time Complexity:** `O(n²)` *(Worst Case)*
+**Time Complexity:** `O(n²)` 
 
 **Auxiliary Space:** `O(n)`
 
@@ -86,6 +86,4 @@ false
 
 ---
 
-## Note
 
-The expected optimal solution uses the **KMP (Knuth-Morris-Pratt)** algorithm with **O(n)** time complexity. This implementation will be added after studying the KMP algorithm.
