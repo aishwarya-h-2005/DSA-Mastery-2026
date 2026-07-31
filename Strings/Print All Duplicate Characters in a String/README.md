@@ -13,10 +13,7 @@ geeksforgeeks
 
 **Output**
 ```text
-['e',4]
-['g',2]
-['k',2]
-['s',2]
+['e',4], ['g',2], ['k',2], ['s',2]
 ```
 
 ### Example 2
@@ -28,41 +25,68 @@ programming
 
 **Output**
 ```text
-['g',2]
-['m',2]
-['r',2]
+['r',2], ['g',2], ['m',2]
 ```
 
 ---
 
-## Approach 1 - Using Sorting
+# Approach 1 - Using Sorting
 
-### Algorithm
+## Idea
+
+Convert the string into a character array and sort it. After sorting, duplicate characters become adjacent. Traverse the sorted array, count consecutive duplicate characters, and print those whose count is greater than one.
+
+## Algorithm
 
 1. Convert the string into a character array.
 2. Sort the character array.
-3. Initialize `count = 1`.
-4. Traverse the sorted array.
-5. If the current character is the same as the previous character, increment `count`.
-6. Otherwise:
-   - If `count > 1`, print the previous character and its frequency.
-   - Reset `count = 1`.
-7. After the loop, print the last character if its count is greater than 1.
+3. Traverse the sorted array.
+4. Count consecutive duplicate characters.
+5. Print the character and its frequency.
+6. Print the last duplicate group after the loop.
+
+### Time Complexity
+
+**O(n log n)**
+
+### Auxiliary Space
+
+**O(n)**
 
 ---
 
-## Time Complexity
+# Approach 2 - Using Hashing
 
-- **O(n log n)**
+## Idea
+
+Count how many times each character appears using a HashMap, which provides efficient lookups and updates. Traverse the string once to store the frequency of every character. Finally, print only those characters whose frequency is greater than one.
+
+This approach avoids sorting and achieves linear time complexity, making it suitable for large strings.
+
+## Algorithm
+
+1. Create a HashMap to store character frequencies.
+2. Traverse the string.
+3. If the character already exists, increment its frequency.
+4. Otherwise, insert it with frequency `1`.
+5. Traverse the HashMap.
+6. Print all characters whose frequency is greater than `1`.
+
+### Time Complexity
+
+**O(n)**
+
+### Auxiliary Space
+
+**O(k)**
+
+Where `k` is the number of distinct characters.
+
+> **Note:** If the input contains only lowercase English letters, the auxiliary space can be considered **O(26)**, which is constant **O(1)**.
 
 ---
 
-## Auxiliary Space
+## Java Solutions
 
-- **O(n)** (Character array created using `toCharArray()`)
-
----
-
-## Java Solution
-
-See `Using Sorting.java`.
+- `Using Sorting.java`
+- `Using Hashing.java`
