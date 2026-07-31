@@ -65,4 +65,4 @@ programming
 
 ## Java Solution
 
-See `Solution.java`.
+See `Using Sorting.java`.
